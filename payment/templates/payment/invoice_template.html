@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        @page { size: A5; margin: 8mm; padding: 12mm; border: 2px ridge #333; }
+        body { font-family: 'Open Sans', Arial, sans-serif; font-size: 16px; }
+        .logo { text-align: center; padding-bottom: 10px; color: #186A3B }
+        .header { text-align: center; padding-bottom: 5px; }
+        .issued { text-align: center; padding-bottom: 5px; }
+        
+        .info-table { width: 100%; margin-bottom: 30px;
+            border: 1px solid #000; border-collapse: collapse; }
+        .info-table td { padding: 10px; padding-bottom: 5px; }
+        .info-table tr { border-bottom: 1px solid #000; }
+        .info-table tr:last-child { border-bottom: none; }
+        .left-col { width: 30%; font-weight: bold; }        
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>Markazul Quran Wassunnah Institute</h1>
+    </div>
+    <div class="header">
+        <h2>Invoice #{{ invoice.number }}</h2>
+    </div>
+
+    <div class="issued">
+        <p>Issued: {{ invoice.issued }}</p>
+    </div>
+
+    <table class="info-table">
+        <tr>
+            <td class="left-col">Student</td>
+            <td>{{ invoice.payment.enrollment.student.fullname }}</td>
+        </tr>
+        <tr>
+            <td class="left-col">Course</td>
+            <td>{{ invoice.payment.enrollment.course.title_en }}</td>
+        </tr>
+        <tr>
+            <td class="left-col">Purpose</td>
+            <td>{{ invoice.payment.type }}</td>
+        </tr>
+        <tr>
+            <td class="left-col">Method</td>
+            <td>{{ invoice.payment.method.name }}</td>
+        </tr>
+        <tr>
+            <td class="left-col">Amount</td>
+            <td>{{ invoice.payment.amount }}</td>
+        </tr>
+    </table>
+
+    <p>Thank you for your Payment!</p>
+
+    <br>
+
+    <div class="footer">
+        <p>Best Regards,</p>
+        <p><strong>Markazul Quran Wassunnah Institute</strong></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Notification</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .invoice-container {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .invoice-header { color: #333; }
+        .invoice-footer { margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <h4 class="invoice-header">Dear {{ student_name }},</h4>
+        <p>We are pleased to inform you that your Invoice has been generated for:</p>
+
+        <ul>
+            <li><strong>Course:</strong> {{ course_title }}</li>
+            <li><strong>Invoice Number:</strong> {{ invoice_number }}</li>
+            <li><strong>Issued Date:</strong> {{ issued_date|date:"F d, Y" }}</li>
+        </ul>
+
+        <p>Please find your Invoice attached to this Email.</p>
+
+        <p>Thank you for choosing our Platform!</p>
+
+        <p class="invoice-footer">Best Regards,<br><strong>Markazul Quran Wassunnah Institute</strong></p>
+    </div>
+</body>
+</html>

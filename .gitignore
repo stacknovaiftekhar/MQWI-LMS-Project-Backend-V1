@@ -1,0 +1,5 @@
+venv
+.env
+passenger_wsgi.py
+
+Notes & Files
