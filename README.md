@@ -71,11 +71,17 @@ This backend powers the complete academic management system for the institute �
 ---
 
 ## 👨‍💻 Author
-Iftekhar Hasan
-Developer & Maintainer
+IFTEKHAR HASAN
+
+👨‍💻 Developer & Maintainer
+
 📧 admin@markazulquranwassunnah.com
+
 🌐 markazulquranwassunnah.com
 
-📝 License
+---
+
+## 📝 License
 This project is for educational and institutional use under the Markazul Quran Wassunnah Institute.
+
 Unauthorized commercial use is prohibited.
